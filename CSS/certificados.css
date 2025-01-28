@@ -1,0 +1,62 @@
+/* Certificados - Carrossel */
+.carousel {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-items {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.carousel-item img {
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.carousel-item h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.carousel-item p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 2em;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}

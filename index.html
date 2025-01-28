@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="CSS/navegacao.css">
+    <link rel="stylesheet" href="CSS/sobre.css">
+    <link rel="stylesheet" href="CSS/projetos.css">
+    <link rel="stylesheet" href="CSS/certificados.css">
+    <link rel="stylesheet" href="CSS/contato.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Meu Portfólio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#certificados">Certificados</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="inicio" id="inicio">
+        <div class="inicio-container">
+            <h2>Sobre Mim</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sed consectetur aliquam quod consequatur
+                molestias quisquam, sapiente officia dolorem quia et sequi, error ab libero ipsam. Eos deserunt et
+                facilis!</p>
+        </div>
+    </section>
+
+    <section class="sobre" id="sobre">
+        <div class="sobre-container">
+            <h2>Sobre Mim</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sed consectetur aliquam quod consequatur
+                molestias quisquam, sapiente officia dolorem quia et sequi, error ab libero ipsam. Eos deserunt et
+                facilis!</p>
+        </div>
+    </section>
+
+    <section class="projetos" id="projetos">
+        <div class="projetos-container">
+            <h2>Meus Projetos</h2>
+            <div class="projetos">
+                <div class="projeto">
+                    <img src="https://via.placeholder.com/300" alt="Projeto 1">
+                    <h3>Projeto 1</h3>
+                    <p>Descrição do projeto 1.</p>
+                </div>
+                <div class="projeto">
+                    <img src="https://via.placeholder.com/300" alt="Projeto 2">
+                    <h3>Projeto 2</h3>
+                    <p>Descrição do projeto 2.</p>
+                </div>
+                <div class="projeto">
+                    <img src="https://via.placeholder.com/300" alt="Projeto 3">
+                    <h3>Projeto 3</h3>
+                    <p>Descrição do projeto 3.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="certificados" id="certificados">
+        <div class="certificados-container">
+            <h2>Meus Certificados</h2>
+            <div class="carousel">
+                <div class="carousel-items">
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/400x250" alt="Certificado 1">
+                        <h3>Certificado 1</h3>
+                        <p>Descrição do certificado 1.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/400x250" alt="Certificado 2">
+                        <h3>Certificado 2</h3>
+                        <p>Descrição do certificado 2.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/400x250" alt="Certificado 3">
+                        <h3>Certificado 3</h3>
+                        <p>Descrição do certificado 3.</p>
+                    </div>
+                </div>
+                <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+                <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="contato" id="contato">
+        <div class="contato-container">
+            <h2>Contato</h2>
+            <form id="formContato">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+                <p id="feedbackMessage"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Meu Portfólio</p>
+        </div>
+    </footer>
+
+    <script src="JS/carrossel.js"></script>
+    <script src="JS/sript.js"></script>
+</body>
+
+</html>
