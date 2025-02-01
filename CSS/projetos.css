@@ -3,7 +3,9 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
+.projetos h2 {
+    text-align: center;
+}
 .projeto {
     background: #fff;
     border: 1px solid #ddd;
