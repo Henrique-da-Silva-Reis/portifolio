@@ -1,3 +1,10 @@
+:root {
+    --bg-color1: #080808;
+    --bg-color2: #101010;
+    --bg-color3: #fff;
+    --bg-color4: #ca0bf5;
+}
+
 .projetos {
     display: flex;
     justify-content: space-between;

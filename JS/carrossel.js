@@ -1,38 +1,52 @@
 document.addEventListener("DOMContentLoaded", function() {
     const prevButton = document.querySelector(".prev");
     const nextButton = document.querySelector(".next");
-    const carouselItems = document.querySelector(".carousel-items");
-    const totalItems = document.querySelectorAll(".carousel-item").length;
-    const itemWidth = document.querySelector(".carousel-item").offsetWidth + 15; // Considerando o gap
+    const carrosselItems = document.querySelector(".carrossel-items");
+    const carrosselItem = document.querySelector(".carrossel-item");
 
+    let totalItems = carrosselItems.children.length;
     let currentIndex = 0;
+    let itemWidth = carrosselItem.offsetWidth;
 
     // Função para mover para o próximo item
     function moveNext() {
-        if (currentIndex < totalItems - 1) {
-            currentIndex++;
-        } else {
-            currentIndex = 0; // Se atingir o final, volta para o primeiro
+        currentIndex++;
+
+        // Se atingir o último item, volta para o primeiro
+        if (currentIndex >= totalItems) {
+            currentIndex = 0;
         }
-        updateCarouselPosition();
+
+        // Atualiza a posição do carrossel
+        updateCarrosselPosition();
     }
 
     // Função para mover para o item anterior
     function movePrev() {
-        if (currentIndex > 0) {
-            currentIndex--;
-        } else {
-            currentIndex = totalItems - 1; // Se estiver no início, vai para o último
+        currentIndex--;
+
+        // Se atingir o primeiro item, volta para o último
+        if (currentIndex < 0) {
+            currentIndex = totalItems - 1;
         }
-        updateCarouselPosition();
+
+        // Atualiza a posição do carrossel
+        updateCarrosselPosition();
     }
 
-    // Atualiza a posição dos itens no carrossel
-    function updateCarouselPosition() {
-        carouselItems.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    // Atualiza a posição do carrossel
+    function updateCarrosselPosition() {
+        carrosselItems.style.transition = "transform 0.5s ease-in-out"; // Reativa a transição suave
+        carrosselItems.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
     }
 
-    // Adicionando os ouvintes de eventos para os botões
+    // Adiciona os ouvintes de eventos para os botões
     nextButton.addEventListener("click", moveNext);
     prevButton.addEventListener("click", movePrev);
+
+    // Recalcula o itemWidth ao redimensionar a janela
+    window.addEventListener("resize", function() {
+        itemWidth = carrosselItem.offsetWidth;
+        updateCarrosselPosition();
+    });
 });

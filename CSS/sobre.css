@@ -21,10 +21,15 @@
 
 .heading {
     text-align: center;
-    font-size: 8rem;
+    font-size: 3rem;
 }
 
 .sobre-content h2 {
     text-align: left;
     line-height: 1.5rem;
+}
+
+.sobre-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
 }

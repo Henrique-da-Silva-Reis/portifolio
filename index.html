@@ -22,7 +22,7 @@
             <i class='bx bx-menu' id="menu-icon"></i>
 
             <nav class="navbar">
-                    <a href="#inicio">Inicio</a>
+                    <a href="#inicio" class="active">Inicio</a>
                     <a href="#sobre">Sobre</a>
                     <a href="#projetos">Projetos</a>
                     <a href="#certificados">Certificados</a>
@@ -61,17 +61,17 @@
             <h2>Meus Projetos</h2>
             <div class="projetos">
                 <div class="projeto">
-                    <img src="https://via.placeholder.com/300" alt="Projeto 1">
+                    <img src="IMG/assassins-creed.jpg" alt="Projeto 1">
                     <h3>Projeto 1</h3>
                     <p>Descrição do projeto 1.</p>
                 </div>
                 <div class="projeto">
-                    <img src="https://via.placeholder.com/300" alt="Projeto 2">
+                    <img src="IMG/assassins-creed.jpg" alt="Projeto 2">
                     <h3>Projeto 2</h3>
                     <p>Descrição do projeto 2.</p>
                 </div>
                 <div class="projeto">
-                    <img src="https://via.placeholder.com/300" alt="Projeto 3">
+                    <img src="IMG/assassins-creed.jpg" alt="Projeto 3">
                     <h3>Projeto 3</h3>
                     <p>Descrição do projeto 3.</p>
                 </div>
@@ -82,20 +82,25 @@
     <section class="certificados" id="certificados">
         <h2>Certificados</h2>
         <div class="certificados-container">
-            <div class="carousel">
+            <div class="carrossel">
                 <button class="prev">❮</button>
-                <div class="carousel-items">
-                    <div class="carousel-item">
+                <div class="carrossel-items">
+                    <div class="carrossel-item">
                         <img src="IMG/assassins-creed.jpg" alt="imagem">
                         <h3>Desenvolvedor</h3>
                         <p>Certificado em Desenvolvimento Web Full Stack.</p>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carrossel-item">
                         <img src="IMG/assassins-creed.jpg" alt="imagem">
                         <h3>Desenvolvedor</h3>
                         <p>Certificado em Desenvolvimento Web Full Stack.</p>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carrossel-item">
+                        <img src="IMG/assassins-creed.jpg" alt="imagem">
+                        <h3>Desenvolvedor</h3>
+                        <p>Certificado em Desenvolvimento Web Full Stack.</p>
+                    </div>
+                    <div class="carrossel-item">
                         <img src="IMG/assassins-creed.jpg" alt="imagem">
                         <h3>Desenvolvedor</h3>
                         <p>Certificado em Desenvolvimento Web Full Stack.</p>
@@ -104,26 +109,25 @@
                 <button class="next">❯</button>
             </div>
         </div>
-    </section>
-    
+    </section>    
 
     <section class="contato" id="contato">
-        <div class="contato-container">
-            <h2>Contato</h2>
-            <form id="formContato">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+        <h2 class="heading">Contato</h2>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Nome completo">
+                <input type="email" placeholder="Email">
+            </div>
 
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+            <div class="input-box">
+                <input type="number" placeholder="Numero de telefone">
+                <input type="text" placeholder="Subject">
+            </div>
 
-                <button type="submit">Enviar</button>
-                <p id="feedbackMessage"></p>
-            </form>
-        </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Sua menssagem"></textarea>
+            <input type="submit" value="menssagem" class="btn">
+        </form>
     </section>
 
     <footer>

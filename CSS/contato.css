@@ -1,3 +1,45 @@
-.contato h2{
+:root {
+    --bg-color1: #080808;
+    --bg-color2: #101010;
+    --bg-color3: #fff;
+    --bg-color4: #ca0bf5;
+}
+
+.contato {
+    background-color: var(--bg-color1);
+}
+
+.contato h2 {
+    margin-bottom: 3rem;
+    color: var(--bg-color3);
+}
+
+.contato form {
+    max-width: 70rem;
+    margin: 1rem auto;
     text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contato form .input-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contato form .input-box input,
+.contato form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--bg-color3);
+    background: var(--bg-color1);
+    border-radius: 0.8rem;
+    border: 2px solid var(--bg-color4);
+    margin: 1rem 0;
+    resize: none;
+}
+
+.contato form .btn {
+    margin-top: 2rem;
 }

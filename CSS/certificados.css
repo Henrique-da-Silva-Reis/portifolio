@@ -1,9 +1,17 @@
-.certificados h2 {
-    text-align: center;
+:root {
+    --bg-color1: #080808;
+    --bg-color2: #101010;
+    --bg-color3: #fff;
+    --bg-color4: #ca0bf5;
+}
+
+.certificados {
+    background: var(--bg-color2);
+    color: var(--bg-color3);
 }
 
 /* Certificados - Carrossel */
-.carousel {
+.carrossel {
     position: relative;
     display: flex;
     overflow: hidden;
@@ -13,13 +21,13 @@
     width: 100%;
 }
 
-.carousel-items {
+.carrossel-items {
     display: flex;
     gap: 35px; /* Espaço entre os itens */
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease; /* Transição suave entre os itens */
 }
 
-.carousel-item {
+.carrossel-item {
     min-width: 280px;  /* Tamanho fixo do bloco de certificado */
     flex-shrink: 0;  /* Impede que os itens encolham */
     background-color: #fff;
@@ -30,28 +38,28 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.carousel-item img {
+.carrossel-item img {
     width: 100%;
     max-width: 200px;
     border-radius: 5px;
     margin-bottom: 15px;
 }
 
-.carousel-item h3 {
+.carrossel-item h3 {
     font-size: 1.4em;
     margin: 10px 0;
     color: #333;
 }
 
-.carousel-item p {
+.carrossel-item p {  /* Corrigindo o erro de classe aqui */
     font-size: 1em;
     color: #777;
 }
 
 /* Efeito de elevação ao passar o mouse */
-.carousel-item:hover {
+.carrossel-item:hover {
     transform: translateY(-10px);  
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 25px var(--bg-color4);
 }
 
 /* Botões de Navegação */
@@ -83,16 +91,16 @@ button.prev:hover, button.next:hover {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .carousel {
+    .carrossel {
         padding: 10px;
     }
-    .carousel-item {
+    .carrossel-item {
         min-width: 200px;  /* Reduzir o tamanho dos itens em telas menores */
     }
 }
 
 @media (max-width: 480px) {
-    .carousel-item {
+    .carrossel-item {
         min-width: 150px;  /* Ainda menor em telas muito pequenas */
     }
 }
