@@ -1,52 +1,35 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const prevButton = document.querySelector(".prev");
-    const nextButton = document.querySelector(".next");
-    const carrosselItems = document.querySelector(".carrossel-items");
-    const carrosselItem = document.querySelector(".carrossel-item");
+let currentIndexCertificados = 0;
+const certificadosContainer = document.querySelector('#certificados .certificados-container');
+const certificados = document.querySelectorAll('#certificados .certificado');
+const totalCertificados = certificados.length;
 
-    let totalItems = carrosselItems.children.length;
-    let currentIndex = 0;
-    let itemWidth = carrosselItem.offsetWidth;
+const prevButtonCertificado = document.getElementById('prev-certificado');
+const nextButtonCertificado = document.getElementById('next-certificado');
 
-    // Função para mover para o próximo item
-    function moveNext() {
-        currentIndex++;
-
-        // Se atingir o último item, volta para o primeiro
-        if (currentIndex >= totalItems) {
-            currentIndex = 0;
-        }
-
-        // Atualiza a posição do carrossel
-        updateCarrosselPosition();
+function moveToSlideCertificado(index) {
+    // Previne index fora do limite
+    if (index < 0) {
+        currentIndexCertificados = totalCertificados - 1;
+    } else if (index >= totalCertificados) {
+        currentIndexCertificados = 0;
+    } else {
+        currentIndexCertificados = index;
     }
 
-    // Função para mover para o item anterior
-    function movePrev() {
-        currentIndex--;
+    // Mover o slider
+    certificadosContainer.style.transform = `translateX(-${currentIndexCertificados * 100}%)`;
+}
 
-        // Se atingir o primeiro item, volta para o último
-        if (currentIndex < 0) {
-            currentIndex = totalItems - 1;
-        }
-
-        // Atualiza a posição do carrossel
-        updateCarrosselPosition();
-    }
-
-    // Atualiza a posição do carrossel
-    function updateCarrosselPosition() {
-        carrosselItems.style.transition = "transform 0.5s ease-in-out"; // Reativa a transição suave
-        carrosselItems.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-    }
-
-    // Adiciona os ouvintes de eventos para os botões
-    nextButton.addEventListener("click", moveNext);
-    prevButton.addEventListener("click", movePrev);
-
-    // Recalcula o itemWidth ao redimensionar a janela
-    window.addEventListener("resize", function() {
-        itemWidth = carrosselItem.offsetWidth;
-        updateCarrosselPosition();
-    });
+prevButtonCertificado.addEventListener('click', () => {
+    moveToSlideCertificado(currentIndexCertificados - 1);
 });
+
+nextButtonCertificado.addEventListener('click', () => {
+    moveToSlideCertificado(currentIndexCertificados + 1);
+});
+
+/* Iniciar o carrossel automaticamente a cada 3 segundos
+setInterval(() => {
+    moveToSlideCertificado(currentIndexCertificados + 1);
+}, 3000);
+*/

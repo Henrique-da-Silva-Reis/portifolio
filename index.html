@@ -57,9 +57,9 @@
     </section>
 
     <section class="projetos" id="projetos">
-        <div class="projetos-container">
-            <h2>Meus Projetos</h2>
-            <div class="projetos">
+        <h2>Meus Projetos</h2>
+        <div class="slider">
+            <div class="projetos-container">
                 <div class="projeto">
                     <img src="IMG/assassins-creed.jpg" alt="Projeto 1">
                     <h3>Projeto 1</h3>
@@ -75,39 +75,53 @@
                     <h3>Projeto 3</h3>
                     <p>Descrição do projeto 3.</p>
                 </div>
+                <div class="projeto">
+                    <img src="IMG/assassins-creed.jpg" alt="Projeto 4">
+                    <h3>Projeto 4</h3>
+                    <p>Descrição do projeto 4.</p>
+                </div>
+                <!-- Adicione mais projetos conforme necessário -->
             </div>
+            <button id="prev">Anterior</button>
+            <button id="next">Próximo</button>
         </div>
     </section>
+    
+    
 
     <section class="certificados" id="certificados">
-        <h2>Certificados</h2>
-        <div class="certificados-container">
-            <div class="carrossel">
-                <button class="prev">❮</button>
-                <div class="carrossel-items">
-                    <div class="carrossel-item">
-                        <img src="IMG/assassins-creed.jpg" alt="imagem">
-                        <h3>Desenvolvedor</h3>
-                        <p>Certificado em Desenvolvimento Web Full Stack.</p>
-                    </div>
-                    <div class="carrossel-item">
-                        <img src="IMG/assassins-creed.jpg" alt="imagem">
-                        <h3>Desenvolvedor</h3>
-                        <p>Certificado em Desenvolvimento Web Full Stack.</p>
-                    </div>
-                    <div class="carrossel-item">
-                        <img src="IMG/assassins-creed.jpg" alt="imagem">
-                        <h3>Desenvolvedor</h3>
-                        <p>Certificado em Desenvolvimento Web Full Stack.</p>
-                    </div>
-                    <div class="carrossel-item">
-                        <img src="IMG/assassins-creed.jpg" alt="imagem">
-                        <h3>Desenvolvedor</h3>
-                        <p>Certificado em Desenvolvimento Web Full Stack.</p>
-                    </div>
+        <h1>Certificados</h1>
+        <div class="slider">
+            <div class="certificados-container">
+                <div class="certificado">
+                    <h1>PHP Moderno</h1>
+                    <img src="IMG/php-img.png" alt="php-img">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam repudiandae explicabo expedita.</p>
                 </div>
-                <button class="next">❯</button>
+                <div class="certificado">
+                    <h1>Slide 2</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam repudiandae explicabo expedita.</p>
+                </div>
+                <div class="certificado">
+                    <h1>Slide 3</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam repudiandae explicabo expedita.</p>
+                </div>
+                <div class="certificado">
+                    <h1>Slide 4</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam repudiandae explicabo expedita.</p>
+                </div>
+                <!-- Adicione mais slides conforme necessário -->
             </div>
+            <button id="prev-certificado" class="nav-button">&#10094;</button>
+            <button id="next-certificado" class="nav-button">&#10095;</button>
+        </div>      
+
+        <div id="tecnologias">
+            <img class="tec" src="IMG/html.png">
+            <img class="tec" src="IMG/css.png">
+            <img class="tec" src="IMG/javascript.png">
+            <img class="tec" src="IMG/github.png">
+            <img class="tec" src="IMG/python.png">
         </div>
     </section>    
 
@@ -122,11 +136,11 @@
 
             <div class="input-box">
                 <input type="number" placeholder="Numero de telefone">
-                <input type="text" placeholder="Subject">
+                <input type="text" placeholder="Assunto">
             </div>
 
             <textarea name="" id="" cols="30" rows="10" placeholder="Sua menssagem"></textarea>
-            <input type="submit" value="menssagem" class="btn">
+            <input type="submit" value="Enviar" class="btn">
         </form>
     </section>
 
@@ -137,7 +151,10 @@
     </footer>
 
     <script src="JS/carrossel.js"></script>
+    <script src="JS/carrossel2.js"></script>
     <script src="JS/sript.js"></script>
+    <script src="JS/sript.js"></script>
+    <script src="JS/menu.js"></script>
 </body>
 
 </html>

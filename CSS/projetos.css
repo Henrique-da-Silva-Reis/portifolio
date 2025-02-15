@@ -3,27 +3,83 @@
     --bg-color2: #101010;
     --bg-color3: #fff;
     --bg-color4: #ca0bf5;
+    --bg-color5: #505050;
 }
 
 .projetos {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.projetos h2 {
     text-align: center;
+    padding: 50px 0;
 }
+
+.slider {
+    position: relative;
+    width: 80%; /* Largura do carrossel */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.projetos-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
 .projeto {
-    background: #fff;
-    border: 1px solid #ddd;
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
     padding: 20px;
-    margin-bottom: 20px;
-    width: 30%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
 .projeto img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.projeto h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.projeto p {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Efeito de hover */
+.projeto:hover {
+    transform: scale(1.05); /* Aumenta o projeto no hover */
+}
+
+.projeto img:hover {
+    transform: scale(1.1); /* Aumenta a imagem no hover */
+}
+
+/* Botões de navegação */
+button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }

@@ -3,104 +3,123 @@
     --bg-color2: #101010;
     --bg-color3: #fff;
     --bg-color4: #ca0bf5;
+    --bg-color5: #505050;
 }
 
+/* Estilo da seção Certificados */
 .certificados {
-    background: var(--bg-color2);
-    color: var(--bg-color3);
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    background: var(--bg-color2); 
+    padding: 50px 0;
 }
 
-/* Certificados - Carrossel */
-.carrossel {
+.certificados h1 {
+    font-size: 24px; 
+    margin-bottom: 20px; 
+}
+
+
+.slider {
     position: relative;
-    display: flex;
+    width: 60%; 
+    height: 300px; 
+    margin: 0 auto;
     overflow: hidden;
-    padding: 20px 0;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    border: 2px solid #ccc; 
+    border-radius: 10px; 
+    background-color: #f9f9f9; 
 }
 
-.carrossel-items {
+.certificados-container {
     display: flex;
-    gap: 35px; /* Espaço entre os itens */
-    transition: transform 0.5s ease; /* Transição suave entre os itens */
+    transition: transform 0.5s ease-in-out;
 }
 
-.carrossel-item {
-    min-width: 280px;  /* Tamanho fixo do bloco de certificado */
-    flex-shrink: 0;  /* Impede que os itens encolham */
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.certificado {
+    min-width: 100%;
+    box-sizing: border-box;
     text-align: center;
     padding: 20px;
-    transition: transform 0.3s ease-in-out;
 }
 
-.carrossel-item img {
+.certificado img {
     width: 100%;
-    max-width: 200px;
-    border-radius: 5px;
-    margin-bottom: 15px;
+    height: auto;
+    margin-bottom: 20px;
 }
 
-.carrossel-item h3 {
-    font-size: 1.4em;
+.certificado h1 {
+    font-size: 1.5em;
     margin: 10px 0;
-    color: #333;
 }
 
-.carrossel-item p {  /* Corrigindo o erro de classe aqui */
+.certificado p {
     font-size: 1em;
-    color: #777;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-/* Efeito de elevação ao passar o mouse */
-.carrossel-item:hover {
-    transform: translateY(-10px);  
-    box-shadow: 0 0 25px var(--bg-color4);
-}
-
-/* Botões de Navegação */
-button.prev, button.next {
+/* Estilo dos botões de navegação */
+.nav-button {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    font-size: 2em;
+    color: white;
+    font-size: 30px;
     border: none;
-    padding: 10px;
     cursor: pointer;
-    z-index: 10;
-    transition: background-color 0.3s ease;
+    padding: 10px;
+    z-index: 1;
+    transform: translateY(-50%);
 }
 
-button.prev {
+#prev-certificado {
     left: 10px;
 }
 
-button.next {
+#next-certificado {
     right: 10px;
 }
 
-button.prev:hover, button.next:hover {
+.nav-button:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .carrossel {
-        padding: 10px;
-    }
-    .carrossel-item {
-        min-width: 200px;  /* Reduzir o tamanho dos itens em telas menores */
-    }
+
+
+/*Ajuste das tecnologias*/
+#tecnologias{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 5px;
 }
 
-@media (max-width: 480px) {
-    .carrossel-item {
-        min-width: 150px;  /* Ainda menor em telas muito pequenas */
-    }
+#tecnologias img{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: #fff;
+    border: 0.2rem solid var(--bg-color3);
+    font-size: 2.5rem;
+    border-radius: 1rem;
+    color: var(--bg-color3);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease-in-out;
+}
+
+#tecnologias img:hover{
+    color: var(--bg-color3);
+    transform: scale(1.2)translateY(-5px);
+    box-shadow: 0 0 25px var(--bg-color5);
+    background-color: var(--bg-color5);
+    border: var(--bg-color5);
 }
