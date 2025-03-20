@@ -8,29 +8,16 @@
 
 /* Estilo da seção Certificados */
 .certificados {
-    display: flex;
-    flex-direction: column; 
-    justify-content: flex-start; 
-    align-items: center; 
-    background: var(--bg-color2); 
+    text-align: center;
     padding: 50px 0;
+    background: var(--bg-color2);
 }
-
-.certificados h1 {
-    font-size: 24px; 
-    margin-bottom: 20px; 
-}
-
 
 .slider {
     position: relative;
-    width: 60%; 
-    height: 300px; 
+    width: 80%; /* Largura do carrossel */
     margin: 0 auto;
     overflow: hidden;
-    border: 2px solid #ccc; 
-    border-radius: 10px; 
-    background-color: #f9f9f9; 
 }
 
 .certificados-container {
@@ -43,15 +30,20 @@
     box-sizing: border-box;
     text-align: center;
     padding: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+.certificado{
+    background: #101010;
 }
 
 .certificado img {
-    width: 100%;
-    height: auto;
+    width: 40%;
+    height: 50%;
     margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.certificado h1 {
+.certificado h3 {
     font-size: 1.5em;
     margin: 10px 0;
 }
@@ -62,13 +54,22 @@
     margin-bottom: 20px;
 }
 
-/* Estilo dos botões de navegação */
-.nav-button {
+/* Efeito de hover */
+.certificado:hover {
+    transform: scale(1.05); /* Aumenta o item no hover */
+}
+
+.certificado img:hover {
+    transform: scale(1.1); /* Aumenta a imagem no hover */
+}
+
+/* Botões de navegação */
+.certificados button {
     position: absolute;
     top: 50%;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    font-size: 30px;
+    font-size: 20px;
     border: none;
     cursor: pointer;
     padding: 10px;
@@ -84,42 +85,6 @@
     right: 10px;
 }
 
-.nav-button:hover {
+.certificados button:hover {
     background-color: rgba(0, 0, 0, 0.7);
-}
-
-
-
-/*Ajuste das tecnologias*/
-#tecnologias{
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-#tecnologias img{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 5rem;
-    height: 5rem;
-    background: #fff;
-    border: 0.2rem solid var(--bg-color3);
-    font-size: 2.5rem;
-    border-radius: 1rem;
-    color: var(--bg-color3);
-    margin: 3rem 1.5rem 3rem 0;
-    transition: 0.3s ease-in-out;
-}
-
-#tecnologias img:hover{
-    color: var(--bg-color3);
-    transform: scale(1.2)translateY(-5px);
-    box-shadow: 0 0 25px var(--bg-color5);
-    background-color: var(--bg-color5);
-    border: var(--bg-color5);
 }

@@ -6,7 +6,7 @@ let navLinks = document.querySelectorAll('header nav a');
 window.onscroll =   () => {
     sections.forEach(sec => {
         let top = window.scrollY;
-        let offset = sec.offsetTop -  150;
+        let offset = sec.offsetTop -  130;
         let heigth = sce.offsetHeight;
         let id = sec.getAttribute('id');
 

@@ -28,12 +28,12 @@
     box-sizing: border-box;
     text-align: center;
     padding: 20px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .projeto img {
-    width: 100%;
-    height: auto;
+    width: 80%;
+    height: 70%;
     margin-bottom: 20px;
     transition: transform 0.3s ease-in-out;
 }
@@ -59,7 +59,7 @@
 }
 
 /* Botões de navegação */
-button {
+.projetos button {
     position: absolute;
     top: 50%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -80,6 +80,6 @@ button {
     right: 10px;
 }
 
-button:hover {
+.projetos button:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
