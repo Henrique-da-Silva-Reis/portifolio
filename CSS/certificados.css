@@ -6,18 +6,29 @@
     --bg-color5: #505050;
 }
 
-/* Estilo da seção Certificados */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; 
+    align-items: flex-start;
+}
+
 .certificados {
     text-align: center;
-    padding: 50px 0;
+    padding: 80px 0;
     background: var(--bg-color2);
+    flex: 1;  
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
 .slider {
-    position: relative;
-    width: 80%; /* Largura do carrossel */
-    margin: 0 auto;
-    overflow: hidden;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .certificados-container {
@@ -26,65 +37,93 @@
 }
 
 .certificado {
-    min-width: 100%;
+    min-width: 25%;  
+    max-width: 300px; 
     box-sizing: border-box;
     text-align: center;
     padding: 20px;
     transition: transform 0.5s ease-in-out;
-}
-.certificado{
-    background: #101010;
+    background: #333;  
+    border-radius: 10px;
+    margin: 0 10px;
 }
 
 .certificado img {
-    width: 40%;
-    height: 50%;
+    width: 50%;  
+    height: auto;
     margin-bottom: 20px;
     transition: transform 0.3s ease-in-out;
+    border-radius: 5px;
 }
 
 .certificado h3 {
-    font-size: 1.5em;
+    font-size: 1.2em;  
     margin: 10px 0;
+    color: #fff;
+}
+
+.certificados h2 {
+    margin: 30px 0 40px;
 }
 
 .certificado p {
     font-size: 1em;
-    color: #333;
+    color: #fff;
     margin-bottom: 20px;
 }
 
-/* Efeito de hover */
 .certificado:hover {
-    transform: scale(1.05); /* Aumenta o item no hover */
+    transform: scale(1.05);
 }
 
 .certificado img:hover {
-    transform: scale(1.1); /* Aumenta a imagem no hover */
+    transform: scale(1.1);
 }
 
-/* Botões de navegação */
-.certificados button {
-    position: absolute;
-    top: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 20px;
-    border: none;
+/* Tecnologias */
+#tecnologias {
+    background: #ca0bf5;
+    box-shadow: 0 0 25px var(--bg-color4);
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 40px;
+    gap: 20px;
+    width: 40%; 
+    justify-content: center;
+}
+
+.tec {
+    background: #505050;
+    box-shadow: 0 0 25px var(--bg-color5);
+    border-radius: 5px;
+    width: 40%;
+    max-width: 70px; 
+    margin: 10px;
+    transition: transform 0.5s ease-in-out;
     cursor: pointer;
-    padding: 10px;
-    z-index: 1;
-    transform: translateY(-50%);
 }
 
-#prev-certificado {
-    left: 10px;
+.tec:hover {
+    transform: scale(1.2);
 }
 
-#next-certificado {
-    right: 10px;
-}
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;  
+    }
 
-.certificados button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    .certificados-container,
+    #tecnologias {
+        width: 100%;
+    }
+
+    .certificado {
+        width: 100%;
+    }
+
+    .tec {
+        width: 25%;
+    }
 }

@@ -1,0 +1,43 @@
+:root {
+    --bg-color1: #080808;
+    --bg-color2: #101010;
+    --bg-color3: #fff;
+    --bg-color4: #ca0bf5;
+    --bg-color5: #560069;
+}
+
+footer {
+    background-color: var(--bg-color5);
+    padding: 20px 0;
+    text-align: center; 
+}
+
+.contato {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    gap: 15px; 
+}
+
+.ctt {
+    width: 25px; 
+    height: 25px; 
+    margin-left: 20px;
+    transition: transform 0.3s ease; 
+}
+
+.ctt:hover {
+    transform: scale(1.2);
+}
+
+.texto {
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaço entre ícone e texto */
+}
+
+.texto span {
+    color: #fff;
+}
